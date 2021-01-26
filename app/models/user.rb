@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-    has_many :species
-    has_many :donations, through: :species
+    has_many :donations
+    has_many :species, through: :donations, :dependent => :delete_all
 end
