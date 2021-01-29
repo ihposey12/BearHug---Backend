@@ -1,7 +1,7 @@
 class DonationsController < ApplicationController
     def index
         donations = Donation.all 
-        render json: donations
+        render json: Species.with_donations.map{|s| {:name => s.name, :total => s.total_donations}}
     end
     
     def show
