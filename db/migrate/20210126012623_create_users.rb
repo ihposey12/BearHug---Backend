@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :username
       t.string :email
       t.string :password
-      t.text :description
+      t.text :description, :default => "To Add a Descripton, Edit Your Account"
       t.string :image_url
 
       t.timestamps

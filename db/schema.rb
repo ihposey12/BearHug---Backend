@@ -36,9 +36,10 @@ ActiveRecord::Schema.define(version: 2021_01_28_025826) do
     t.string "username"
     t.string "email"
     t.string "password"
-    t.text "description"
+    t.text "description", default: "To Add a Descripton, Edit Your Account"
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
 end
